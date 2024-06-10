@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Task List</title>
+</head>
+<body>
+<h2>Event List</h2>
+<div th:each="event : ${events}">
+    <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;">
+        <h3 th:text="${event.summary}"></h3>
+        <p th:text="${event.description}"></p>
+        <p>
+            <a th:href="@{'/tasks/edit/' + ${event.id}}">Edit</a> |
+            <a th:href="@{'/tasks/delete/' + ${event.id}}">Delete</a>
+        </p>
+    </div>
+</div>
+<a href="/tasks/add">Add New Event</a>
+</body>
+</html>

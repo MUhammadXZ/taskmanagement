@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Event</title>
+</head>
+<body>
+<h2>Add Event</h2>
+<form action="/tasks/add" method="post" th:object="${event}">
+    Summary: <input type="text" th:field="*{summary}"/><br/>
+    Description: <input type="text" th:field="*{description}"/><br/>
+    Start Time: <input type="datetime-local" th:field="*{startTime}"/><br/>
+    End Time: <input type="datetime-local" th:field="*{endTime}"/><br/>
+    <input type="submit" value="Add Event"/>
+</form>
+</body>
+</html>
