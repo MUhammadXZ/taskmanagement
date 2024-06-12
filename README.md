@@ -22,4 +22,4 @@ This is a simple task management application built with Java Spring Boot. It all
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/taskmanagement.git
+   git clone https://github.com/MUhammadXZ/taskmanagement.git
